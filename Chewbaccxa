@@ -1,0 +1,15 @@
+x = input()  # Número fornecido por Luke Skywalker
+
+# Converter cada dígito para o mínimo possível
+result = ''
+for d in x:
+    digit = int(d)
+    if digit >= 5:
+        digit = 9 - digit
+    result += str(digit)
+
+# Se o primeiro dígito for zero, substituí-lo por 9
+if result[0] == '0':
+    result = '9' + result[1:]
+
+print(result)
